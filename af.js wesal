@@ -1,0 +1,27 @@
+ setTimeout(() => {
+        var url = document.getElementById(document.getElementById(clicked_id).lastElementChild.id).style.backgroundImage;
+        if(url.substring(4, url.length-1)==pre){
+            document.getElementById(preid).remove();
+            document.getElementById(clicked_id).remove();
+            x=x+2;
+            if(x==16){
+    
+                document.getElementById("table").innerHTML="GAME COMLETED !!";
+                document.getElementById("table").style.fontSize="xxx-large";
+                document.getElementById("table").style.textAlign="Center";
+                document.getElementById("table").style.color="deeppink";
+                document.getElementById("table").style.fontWeight="bolder";
+            }
+            start=true;
+        }
+        else{
+            document.getElementById(preid).style.transform="rotateY(360deg)";
+            document.getElementById(clicked_id).style.transform="rotateY(360deg)";
+            start=true;
+        }
+       }, 800);
+       
+   
+
+    }
+}
